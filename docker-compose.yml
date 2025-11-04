@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    container_name: ev-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/model_store:/app/model_store
+    environment:
+      - PYTHONUNBUFFERED=1
+  frontend:
+    working_dir: /app
+    image: node:20-alpine
+    container_name: ev-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+    command: sh -c "npm i && npm run dev -- --host 0.0.0.0"
+    depends_on:
+      - backend
