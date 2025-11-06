@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000'
+const BASE = import.meta.env.VITE_API_BASE || 'http://51.20.36.32:8000'
 
 export async function uploadCsv(file: File) {
   const form = new FormData()

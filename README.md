@@ -25,10 +25,10 @@ This project focuses on Forecast electricity consumption and session demand for 
 ---
 
 ## Live Project Links
-- **UI:** [http://13.51.18.127:5173/](http://13.51.18.127:5173/)
-- **Backend:** [http://13.49.123.34:5000/api/data](http://13.49.123.34:5000/api/data)
+- **UI:** [http://51.20.36.32:5173/login/](http://51.20.36.32:5173/)
+- **Backend:** [http://51.20.36.32:8000/raw](http://51.20.36.32:8000/)
 
-User Name : **admin** || Password: **admin** 
+User Name : **admin** || Password: **admin**  (Default)
 ---
 
 ## Setup Instructions
@@ -66,10 +66,10 @@ Install the required Python packages using the `requirements.txt` file:
 pip install -r requirements.txt
 ```
 
-#### Step 3: Run the Flask Backend
-Start the Flask app:
+#### Step 3: Run the uvicorn Backend
+Start the Uvicorn app:
 ```bash
-python run.py
+uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ---
@@ -94,21 +94,14 @@ npm run dev
 ```
 project-root/
 ├── backend/                # Backend code
-│   ├── app/                # Flask app
-│   │   ├── __init__.py     # Flask app factory
-│   │   ├── routes.py       # API routes
-│   ├── csv/                # Dataset folder
-│   │   ├── data.csv        # Heart disease dataset
+│   ├── app.py              # App
+│   ├── data/               # Dataset folder
 │   ├── requirements.txt    # Python dependencies
-│   ├── run.py              # Entry point for Flask app
 ├── src/                    # Frontend React code
-│   ├── components/         # React components
-│   ├── layout/             # Layout components
-│   ├── slice/              # Redux slices
-│   ├── ui/                 # UI components
+│   ├── libs/               # React components
+│   ├── pages/              # Layout components
 │   ├── App.jsx             # Main application file
 │   ├── main.jsx            # Entry point for React
-│   ├── store.jsx           # Redux store configuration
 ├── assets/                 # Static assets
 ├── README.md               # Project documentation
 ├── package.json            # Node.js dependencies
@@ -119,7 +112,7 @@ project-root/
 ## Features
 
 ### Backend
-- **Flask API** for data processing and machine learning predictions.
+- **uvicorn API** for data processing and machine learning predictions.
 - **Endpoints** for:
   • /ingest-json: Flatten and save ACN JSON.
   • /clean: Aggregate and clean data.
@@ -142,7 +135,31 @@ project-root/
 ## Screenshots
 
 ### Login Screen
-![Login Screen](assets/login.JPG)
+![Login Screen](assets/1.JPG)
+
+### Intro Screen 
+![Intro Screen](assets/2.JPG)
+![Intro Screen](assets/22.JPG)
+
+### Raw Data
+![Raw Data](assets/3.JPG)
+
+### Raw Data Filling
+![Raw Data Filling](assets/4.JPG)
+
+### Cleaning
+![Cleaning](assets/5.JPG)
+![Cleaning](assets/55.JPG)
+
+### Prediction / Forcasting
+![Prediction / Forcasting](assets/7.JPG)
+
+### Explaination of Project
+![Explaination](assets/8.JPG)
+
+### AWS Hosting
+![AWS](assets/10.JPG)
+![AWS](assets/11.JPG)
 
 ---
 
@@ -150,25 +167,20 @@ project-root/
 
 
 ## Conclusion
-- **Random Forest** and **Gradient Boosting** show excellent results.
-- **Decision Tree** achieves perfect training accuracy but might overfit.
-- **Linear Regression** and **XGBoost** underperform and may need feature engineering or model tuning.
-- **Logistic Regression**, **Naive Bayes**, and **SVM** provide moderate classification performance.
+
+ Model Evaluation – Understanding the Metrics
+
+- MAE (Mean Absolute Error): Measures the average magnitude of errors between predicted and actual values, without considering direction. Lower MAE means predictions are closer to true values.
+
+- RMSE (Root Mean Squared Error): Penalizes larger errors more heavily. It’s useful when you care more about large deviations. Smaller RMSE implies more stable forecasts.
+
+- MAPE (Mean Absolute Percentage Error): Expresses errors as a percentage of actual values, making it easier to interpret accuracy in real-world terms (e.g., “Our forecast is 92% accurate”).
+
+- These metrics are shown next to forecast plots to help users visually and statistically evaluate model performance.
 
 ---
 
 
-## Technologies Used
-
-### Backend
-- **Flask**
-- **Flask-CORS**
-- **Pandas** for data processing
-- **Scikit-Learn** for machine learning
-- **XGBoost** for advanced modeling
-- **Logistic Regression**
-- **Svm**
-- **Naive Bayes**
 
 ### Frontend
 - **React.js**
@@ -184,16 +196,6 @@ project-root/
 👤 **Shubham Raj**  
 - GitHub: [@ShubhamRaj](https://github.com/shubham14p3)  
 - LinkedIn: [Shubham Raj](https://www.linkedin.com/in/shubham14p3/)
-
----
-
-## Future Upgrades
-
-- Add more advanced machine learning models.
-- Enhance data visualization with interactive charts.
-- Integrate user-specific data upload and analysis.
-- Adding more data for more better accuracy.
-- Adding new disease dataset for more all round prediction.
 
 ---
 
