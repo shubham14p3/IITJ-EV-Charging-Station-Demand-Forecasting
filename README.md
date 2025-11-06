@@ -135,31 +135,31 @@ project-root/
 ## Screenshots
 
 ### Login Screen
-![Login Screen](assets/1.JPG)
+![Login Screen](assets/1.jpg)
 
 ### Intro Screen 
-![Intro Screen](assets/2.JPG)
-![Intro Screen](assets/22.JPG)
+![Intro Screen](assets/2.jpg)
+![Intro Screen](assets/22.jpg)
 
 ### Raw Data
-![Raw Data](assets/3.JPG)
+![Raw Data](assets/3.jpg)
 
 ### Raw Data Filling
-![Raw Data Filling](assets/4.JPG)
+![Raw Data Filling](assets/4.jpg)
 
 ### Cleaning
-![Cleaning](assets/5.JPG)
-![Cleaning](assets/55.JPG)
+![Cleaning](assets/5.jpg)
+![Cleaning](assets/55.jpg)
 
 ### Prediction / Forcasting
-![Prediction / Forcasting](assets/7.JPG)
+![Prediction / Forcasting](assets/7.jpg)
 
 ### Explaination of Project
-![Explaination](assets/8.JPG)
+![Explaination](assets/8.jpg)
 
 ### AWS Hosting
-![AWS](assets/10.JPG)
-![AWS](assets/11.JPG)
+![AWS](assets/10.jpg)
+![AWS](assets/11.jpg)
 
 ---
 
