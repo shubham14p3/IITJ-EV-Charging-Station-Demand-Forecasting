@@ -30,6 +30,11 @@ This project focuses on Forecast electricity consumption and session demand for 
 
 User Name : **admin** || Password: **admin**  (Default)
 ---
+## Reports
+[Download the report (PDF)](assets/ProjectReport.pdf)
+[Download the report (Word)](assets/ProjectReport.docx)
+[Download the AI report](assets/AIReport.pdf)
+[Download the Similarity report](assets/SimilarityReport.pdf)
 
 ## Setup Instructions
 
